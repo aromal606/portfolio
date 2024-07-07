@@ -2,5 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-  font-family: "inter",sans-serif;
+  font-family: " Helvetica, sans-serif";
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  scrollbar-width: none;
 }
