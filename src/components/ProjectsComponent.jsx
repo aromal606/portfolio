@@ -27,9 +27,11 @@ const ProjectsComponent = () => {
                   {project.technologies.map((techs, index) => {
                     return (
                       
-                        <span  key={index} className="text-purple-900 text-sm font-medium mr-2 px-2 ">
+                      <div key={index}>
+                        <span   className="text-purple-900 text-sm font-medium mr-2 px-2 ">
                           {techs}
                         </span>
+                      </div>
                       
                     );
                   })}
