@@ -1,6 +1,6 @@
 import about from "../assets/about.jpg";
 import { ABOUT_TEXT } from "../constants";
-import { motion } from "framer-motion";
+
 const AboutComponent = () => {
   return (
     <div className="border-b border-neutral-900 pb-16 ml-5">
