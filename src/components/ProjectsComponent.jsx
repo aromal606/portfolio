@@ -8,34 +8,34 @@ const ProjectsComponent = () => {
         {PROJECTS.map((project) => {
           return (
             <div
-              className="flex flex-wrap mb-7 gap-2 lg:justify-center"
+              className="flex flex-wrap mb-8 gap-2 lg:justify-start "
               key={project.id}
             >
-              <div className="w-full lg:w-1/4 ">
-                <img
-                  className=" rounded"
-                  width={150}
-                  height={150}
-                  src={project.image}
-                  alt={project.title}
-                />
-              </div>
-              <div className=" w-full max-w-xl lg:w-3/4">
-                <h5 className="mb-2 font-semibold">{project.title}</h5>
-                <p className="mb-4 text-neutral-400">{project.description}</p>
-                <p className="text-neutral-400">
-                  {project.technologies.map((techs, index) => {
-                    return (
-                      
-                      <div key={index}>
-                        <span   className="text-purple-900 text-sm font-medium mr-2 px-2 ">
-                          {techs}
-                        </span>
-                      </div>
-                      
-                    );
-                  })}
-                </p>
+              <div className="w-full lg:w-1/4 flex flex-col justify-center items-start ml-5">
+                <div className="flex flex-col">
+                  <img
+                    className="mx-auto lg:mx-0 mb-4"
+                    src={project.image}
+                    alt={project.title}
+                  />
+
+                  <div className="w-full lg:w-3/4">
+                    <h5 className="mb-2 font-semibold">{project.title}</h5>
+                    <p className="mb-4 text-neutral-400">
+                      {project.description}
+                    </p>
+                  </div>
+                  <div className="flex flex-wrap">
+                    {project.technologies.map((tech, index) => (
+                      <span
+                        key={index}
+                        className="text-purple-900 text-sm font-medium mr-2 px-2"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           );
